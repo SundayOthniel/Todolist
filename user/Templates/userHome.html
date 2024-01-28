@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+{%extends 'base.html'%}
+{% load static %}
+{%block body%}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{% static 'home.css' %}">
+</head>
+<body>
+    <div class="container">
+        <h2>You are welcome</h2>
+        <p>You are welcome to this website that allows you to keep track of your future task. I hope you experience the best from this website.</p>
+        <a class="btn"href="{%url 'register' %}">Sign Up</a>
+        <a class="btn" href="{%url 'login' %}">Log In</a>
+    </div>
+</body>
+{%endblock%}

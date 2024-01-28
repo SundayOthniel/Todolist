@@ -1,0 +1,44 @@
+body {
+    font-family: Arial, sans-serif;
+}
+.container {
+    width: 50%;
+    margin: 0 auto;
+    padding: 20px;
+}
+form {
+    border: 1px solid #ccc;
+    padding: 20px;
+    border-radius: 5px;
+    text-align: center;
+}
+label {
+    display: block;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+input[type="text"],
+input[type="password"],
+input[type="tel"],
+input[type="address"],
+select {
+    width: 100%;
+    padding: 15px 0;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 3px;
+    text-indent: 10px;
+    font-size: 15px;
+    font-family: 'Courier New', Courier, monospace;
+}
+button {
+    background-color: #007bff;
+    color: #fff;
+    margin-bottom: 15px;
+    border-radius: 3px;
+    cursor: pointer;
+    padding: 10px 20px;
+}
+footer{
+    text-align: center;
+}

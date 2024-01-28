@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+{% load static %} 
+<a href="{% url 'userTaskDetail' taskUpdate.id %}"> {{ taskUpdate.title }} details</a>
+<hr>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="{%static 'userTask.css' %}">
+</head>
+
+<body>
+    <div class="form-container">
+        <h1>Update {{ taskUpdate.title }}</h1>
+        <form method="POST">
+            {% csrf_token %}
+            <label for="title">Title:</label>
+            <input type="text" id="title" name="title" value="{{ taskUpdate.title }}"><br><br>
+
+            <label for="description">Description:</label><br>
+            <textarea id="description" name="description" rows="3" cols="50" value="{{ taskUpdate.description}}"></textarea><br><br>
+
+            <label for="priority">Priority:</label>
+            <option value="{{ taskUpdate.priority }}" selected></option>
+            <select id="priority" name="priority">
+                <option value="high">High</option>
+                <option value="medium" selected>Medium</option>
+                <option value="low">Low</option>
+            </select><br><br>
+
+            <label for="status">Status:</label>
+            <select id="status" name="status" value="{{ taskUpdate.status }}">
+                <option value="pending" selected>Pending</option>
+                <option value="completed">Completed</option>
+                <option value="in_progress">In Progress</option>
+            </select><br><br>
+            <input type="submit" value="Update">
+        </form>
+    </div>
+</body>
+</html>
+<footer>
+    <p id="p">&copy; 2023 Othniel</p>
+</footer>
+</html>

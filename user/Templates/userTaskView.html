@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+{%extends 'base.html'%}
+{% load static %}
+{%block body%}
+<html>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="{% static 'userTaskview.css' %}">
+</head>
+<body>
+  <a href="{%url 'logout' %}">Logout</a>
+  <hr>
+  <a href="{%url 'todo' %}">Back</a><br><br>
+  <form method="POST" action="{% url 'tasklist' %}">
+    <table>
+      <thead>
+        <tr>
+          <th>Title</th>
+          <th>Due date</th>
+        </tr>
+      </thead>
+      <tbody>
+        {%if todos%}
+          {%for todo in todos%}
+            <tr>
+              <!-- <td><input type="checkbox" name="selected_task" value="{{todo.id}}"></td> -->
+              <td><a href="{% url 'userTaskDetail' todo.id %}">{{ todo.title }}</a></td>
+              <td>{{todo.due_date}}</td>
+              <td><a href="{%url 'taskDelete' todo.id %}">Delete</a></td>
+            </tr>
+          {%endfor%}
+        {%else%}
+          <h1>NO TASK</h1>  
+        {%endif%}    
+      </tbody>
+    </table>
+  </form>  
+</body>
+</html>
+{%endblock%}

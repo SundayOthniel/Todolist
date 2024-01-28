@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+{%extends 'base.html'%}
+{% load static %}
+{%block body%}
+<html>
+<head>
+    <title>Login</title>
+    <link rel="stylesheet" href="{% static 'register.css' %}">
+</head>
+<body>
+    <div class="container">
+        <h2>Admin login here</h2>
+        <form method="POST" >
+            {% csrf_token %}
+
+            <label for="email">Email:</label>
+            <input type="text" id="email" name="email" required>
+
+            <label for="password">Password:</label>
+            <input type="password" id="password" name="password" required>
+
+            <button type="submit">Login</button>
+        </form>
+    </div>
+</body>
+{%endblock%}

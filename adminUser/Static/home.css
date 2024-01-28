@@ -1,0 +1,30 @@
+
+    /* Basic CSS for page styling (you can customize this) */
+    body {
+        font-family: Arial, sans-serif;
+    }
+    .container {
+        width: 50%;
+        margin: 0 auto;
+        padding: 20px;
+    }
+    h2 {
+        text-align: center;
+    }
+    .btn {
+        display: block;
+        width: 100%;
+        padding: 10px;
+        margin: 10px 0;
+        background-color: #007bff;
+        color: #fff;
+        border: none;
+        border-radius: 3px;
+        text-align: center;
+        text-decoration: none;
+        cursor: pointer;
+    }
+     footer{
+        text-align: center;
+     }
+   
